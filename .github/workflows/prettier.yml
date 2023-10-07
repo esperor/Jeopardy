@@ -19,7 +19,7 @@ jobs:
         env:
           RUN_ID: ${{ github.run_id }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OWNER: ${{ github.event.repository.owner }}
+          OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
