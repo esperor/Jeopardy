@@ -18,7 +18,7 @@ export default class RoundWidget extends React.Component {
   constructor(
     props:
       | { round: any; assetsDIR: any }
-      | Readonly<{ round: any; assetsDIR: any }>
+      | Readonly<{ round: any; assetsDIR: any }>,
   ) {
     super(props);
 
@@ -36,14 +36,14 @@ export default class RoundWidget extends React.Component {
         if (event.key === "ArrowLeft")
           document.getElementById("btnPrevious").click();
       },
-      true
+      true,
     );
   }
 
   async componentDidUpdate(
     prevProps: Readonly<{}>,
     prevState: Readonly<{}>,
-    snapshot?: any
+    snapshot?: any,
   ) {
     if (this.props == prevProps) return;
 
@@ -81,7 +81,7 @@ export default class RoundWidget extends React.Component {
       questionObj.question,
       questionObj.answer,
       questionObj.value,
-      questionObj.image === "none" ? null : questionObj.image
+      questionObj.image === "none" ? null : questionObj.image,
     );
     this.forceUpdate();
   }
@@ -106,7 +106,7 @@ export default class RoundWidget extends React.Component {
 
   Question = (props: any) => {
     const classes = this._clickedBtnsIDs.includes(
-      props.topicIndex + props.questionIndex + props.roundIndex
+      props.topicIndex + props.questionIndex + props.roundIndex,
     )
       ? "btn completed"
       : "btn";
@@ -118,7 +118,7 @@ export default class RoundWidget extends React.Component {
         onClick={() => {
           props.onClick();
           this._clickedBtnsIDs.push(
-            props.topicIndex + props.questionIndex + props.roundIndex
+            props.topicIndex + props.questionIndex + props.roundIndex,
           );
         }}
       >

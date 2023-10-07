@@ -37,14 +37,16 @@ class Main extends React.Component {
       fr.readAsText(input.files[0]);
     });
 
-    
     this.forceUpdate();
   }
 
   componentDidUpdate() {
     if (this.currentRound === -1 || this.currentRound === 0)
-      document.getElementById("btnPreviousRound").setAttribute("disabled", "true");
-    else document.getElementById("btnPreviousRound").removeAttribute("disabled");
+      document
+        .getElementById("btnPreviousRound")
+        .setAttribute("disabled", "true");
+    else
+      document.getElementById("btnPreviousRound").removeAttribute("disabled");
   }
 
   parseScenario(): void {
@@ -54,12 +56,12 @@ class Main extends React.Component {
 
     if (!Codes.includes(this.scenario.code)) {
       document.getElementById(
-        "pregame-header"
+        "pregame-header",
       ).textContent = `Выбран поврежденный или недопустимый файл.`;
       document.getElementById("btnNextRound").setAttribute("disabled", "true");
     } else {
       document.getElementById(
-        "pregame-header"
+        "pregame-header",
       ).textContent = `Выбран "${this.name}". Автор: ${this.author}.`;
       document.getElementById("btnInputJSON").classList.add("completed");
       -document.getElementById("btnNextRound").removeAttribute("disabled");
@@ -80,7 +82,7 @@ class Main extends React.Component {
     // @ts-ignore
     this.assetsDIR = await window.showDirectoryPicker();
     document.getElementById(
-      "pregame-header"
+      "pregame-header",
     ).textContent = `Выбран каталог: ${this.assetsDIR.name}`;
     document.getElementById("btnInputDIR").classList.add("completed");
 
@@ -104,7 +106,7 @@ class Main extends React.Component {
     btnsToHide.push(document.getElementById("btnInputDIR"));
     btnsToHide.push(document.getElementById("btnInputJSON"));
     btnsToHide.push(document.getElementById("btnNextRound"));
-    btnsToHide.forEach(element => {
+    btnsToHide.forEach((element) => {
       element.classList.add("hidden-btn");
       document.getElementById("pop-down").appendChild(element);
     });
@@ -117,7 +119,7 @@ class Main extends React.Component {
       <div>
         <div className="centered hbox pop-down" id="pop-down"></div>
         <div className="hbox centered">
-        <button
+          <button
             id="btnPreviousRound"
             className="btn no-display"
             type="button"
