@@ -119,12 +119,9 @@ class Main extends React.Component {
     return (
       <div>
         <div className="centered hbox pop-down" id="pop-down"></div>
-        <Header
-          onBtnInputJSONClick={() => this.onBtnInputJSONClick()}
-          onBtnInputDIRClick={() => this.onBtnInputDIRClick()}
-          onBtnNextRoundClick={() => this.onBtnNextRoundClick()}
-          onBtnPreviousRoundClick={() => this.onBtnPreviousRoundClick()}
-        ></Header>
+        <Header onBtnInputJSONClick={() => this.onBtnInputJSONClick()}
+        onBtnInputDIRClick={() => this.onBtnInputDIRClick()} onBtnNextRoundClick={() => this.onBtnNextRoundClick()} onBtnPreviousRoundClick={() => this.onBtnPreviousRoundClick()}}>
+        </Header>
         <h1 className="centered" id="pregame-header"></h1>
         <RoundWidget
           // @ts-ignore
