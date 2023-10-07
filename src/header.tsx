@@ -16,7 +16,10 @@ export default class Header extends React.Component {
         id="btnPreviousRound"
         className="btn no-display"
         type="button"
-        onClick={this.onBtnPreviousRoundClick}>Предыдущий раунд</button>
+        onClick={this.onBtnPreviousRoundClick}
+      >
+        Предыдущий раунд
+      </button>
 
       <button
         id="btnInputDIR"
