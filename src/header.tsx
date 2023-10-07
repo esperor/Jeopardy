@@ -11,13 +11,10 @@ export default class Header extends React.Component {
   }
 
   render() {
-    <div className="hbox centered">
-      <button
-        id="btnPreviousRound"
+    <div className="hbox centered"><button id="btnPreviousRound"
         className="btn no-display"
         type="button"
-        onClick={this.onBtnPreviousRoundClick}
-      >
+        onClick={this.onBtnPreviousRoundClick}>
         Предыдущий раунд
       </button>
 
