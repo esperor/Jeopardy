@@ -1,5 +1,2 @@
-
-const Codes: string[] = [
-    "Jeopardy-v1.0",
-]
+const Codes: string[] = ["Jeopardy-v1.0"];
 export default Codes;
