@@ -9,7 +9,8 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
-      - run: git clone ${{ github.event.pull_request.head.repo.clone_url }}
+      - run: git config user.name github-actions 
+      - run: git config user.email github-actions@github.com
       - name: Checkout
         uses: actions/checkout@v3
         with:
